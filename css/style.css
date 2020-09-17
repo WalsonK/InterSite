@@ -1,0 +1,12 @@
+body {
+    background-color: #DEE1E6;
+}
+
+#loginCard{
+    border-radius: 15px;
+}
+
+.btn-primary{
+    background-color: #EB212E !important;
+    border-color: #EB212E !important;
+}
