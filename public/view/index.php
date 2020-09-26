@@ -14,8 +14,6 @@
         <title>Inter CMS - Login</title>
     </head>
     <body>
-        <?php require 'header/header.php'?>
         <?php require 'include/login.php'?>
-        <?php require 'footer/footer.php'?>
     </body>
 </html>

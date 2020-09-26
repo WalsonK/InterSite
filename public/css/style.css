@@ -4,9 +4,39 @@ body {
 
 #loginCard{
     border-radius: 15px;
+    position: fixed !important;
+    top: 30% !important;
+    left: 17% !important;
 }
 
 .btn-primary{
     background-color: #EB212E !important;
     border-color: #EB212E !important;
+}
+
+.block{
+    display: inline-block;
+}
+
+.menuBlock{
+    display: inline-block;
+    border-radius: 5px;
+    border: solid #EB212E;
+    padding: 10px;
+
+    position: absolute;
+    left: 0.5%;
+    top: 35%;
+    height: 250px;
+}
+
+.optionsBlock{
+    position: absolute;
+    right: 5%;
+    top: 12%;
+    border-radius: 15px;
+}
+.searchBar{
+    position: absolute;
+    right:10%;
 }
