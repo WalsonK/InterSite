@@ -12,10 +12,14 @@
     <!--Custom css-->
     <link rel="stylesheet" href="../css/style.css">
 
-    <title>Inter CMS - Login</title>
+    <title>Inter CMS - Produits</title>
 </head>
+
 <body>
-    <?php require 'include/login.php' ?>
+    <?php require 'header/header.php' ?>
+    <?php require 'include/menu.php' ?>
+    <?php require 'include/main-product-group.php' ?>
+    <?php require 'footer/footer.php' ?>
 </body>
 
 </html>
