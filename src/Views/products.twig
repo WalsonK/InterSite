@@ -1,4 +1,4 @@
-<!doctype html>
+
 <html lang="fr">
 
 <head>
@@ -10,12 +10,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <!--Custom css-->
-    <link rel="stylesheet" href="../css/style.css">
+    <!--<link href="/css/style.css" rel="stylesheet" type="text/css" /> -->
 
-    <title>Inter CMS - Login</title>
+    <title>Inter CMS - Produits</title>
 </head>
+
 <body>
-    <?php require 'include/login.php' ?>
+{% include 'include/header/header.php' %}
+{% include 'include/menu.html' %}
+
+    <?php require 'header/header.php' ?>
+    <?php require 'include/menu.php' ?>
+    <?php require 'include/main-product-group.php' ?>
+    <?php require 'footer/footer.php' ?>
 </body>
 
 </html>
