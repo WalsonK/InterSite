@@ -17,5 +17,9 @@
   # RewriteBase /
 
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteRule ^ index.php [QSA,L]
+  # RewriteRule ^ index.php [QSA,L]
+  
+  RewriteBase /assets
+  
+  RewriteRule !\.(js|gif|jpg|png|css|txt)$ index.php [QSA]
 </IfModule>

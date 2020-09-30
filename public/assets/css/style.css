@@ -1,0 +1,102 @@
+body {
+    background-color: #DEE1E6;
+}
+
+#loginCard{
+    border-radius: 15px;
+    position: fixed !important;
+    top: 30% !important;
+    left: 17% !important;
+}
+
+.btn-primary{
+    background-color: #EB212E !important;
+    border-color: #EB212E !important;
+}
+
+.block{
+    display: inline-block;
+}
+
+/* MENU */
+.menuBlock{
+    display: inline-block;
+    border-radius: 5px;
+    border: solid #EB212E;
+    padding: 10px;
+
+    position: absolute;
+    left: 0.5%;
+    top: 35%;
+    height: 50%;
+    width: 10%;
+}
+.itemMenu{
+    color: #707070;
+    text-decoration: none;
+}
+.itemMenu:hover{
+    color: #EB212E;
+}
+
+.logoMenu{
+    width:35px;
+    height:35px;
+    display: block;
+}
+.menuText{  
+    margin-left: 15%;
+}
+.menuText-short{
+      margin-left: 22%;
+}
+/* Fin menu */
+
+.optionsBlock{
+    position: absolute;
+    right: 5%;
+    top: 12%;
+    border-radius: 15px;
+
+    width:70%;
+}
+.searchBar{
+    position: absolute;
+    right:10%;
+}
+.btnSetting{
+    margin-left: 4%;
+    margin-right: 2%;
+}
+
+.statsBlock{
+    width: 50%;
+}
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .menuText{  
+        margin-left: 0%;
+    }
+    .menuText-short{
+        margin-left: 13%;
+    }
+    .btnSetting{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px){
+    .menuText{  
+       display:none;
+    }
+    .menuText-short{
+        display:none;
+    }
+    .menuBlock{
+        height: 40%;
+    }
+}

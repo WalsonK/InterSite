@@ -28,10 +28,14 @@ return function (App $app){
     });
 
     // Product Route
-    $app->get('/products', function (RequestInterface $request, ResponseInterface $response, $args) {
+    $app->get('/produits', function (RequestInterface $request, ResponseInterface $response, $args) {
         return $this->get('view')->render($response, 'products.twig');
     });
 
+    // Stats Route
+    $app->get('/stats', function (RequestInterface $request, ResponseInterface $response, $args) {
+        return $this->get('view')->render($response, 'stats.twig');
+    });
     
     $container = $app->getContainer();
 
@@ -50,5 +54,5 @@ return function (App $app){
             return $this->get('view')->render($response, $view, compact('name'));
         });
 
-    })->add($container->get('viewMiddleware'));
+    });
 };

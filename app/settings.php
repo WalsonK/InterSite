@@ -18,9 +18,15 @@ return function(Container $container){
                 'level' => Logger::DEBUG,
             ],
             'views' => [
-                'path' => __DIR__ . '/../src/Views',
+                'path' => __DIR__ . '/../src/views',
                 'settings' => ['cache' => false],
             ],
+            'connection' => [
+                'host' => 'https://intermarchegestion.000webhostapp.com/',
+                'dbname' => 'id14985141',
+                'dbuser' => 'id14985141_root',
+                'dbpass' => 'PJ<R{ka5^4|zhvH4',
+            ]
         ];
     });
 

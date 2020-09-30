@@ -1,4 +1,4 @@
-<!doctype html>
+
 <html lang="fr">
 
 <head>
@@ -10,16 +10,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
     <!--Custom css-->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
-    <title>Inter CMS - Produits</title>
+    <title>Inter CMS - Stats</title>
 </head>
 
 <body>
-    <?php require 'header/header.php' ?>
-    <?php require 'include/menu.php' ?>
-    <?php require 'include/main-product-group.php' ?>
-    <?php require 'footer/footer.php' ?>
+{% include 'include/header/header.php' %}
+{% include 'include/menu.html' %}
+{% include 'include/main-stats.twig' %}
+{% include 'include/footer/footer.php' %}
 </body>
 
 </html>
