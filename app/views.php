@@ -26,5 +26,18 @@ return function (App $app) {
     $container->set('LoginController', function () use ($app, $container) {
         return new \App\Http\Controllers\LoginController($container->get('view'));
     });
+    // Set Views into ProductController
+    $container->set('ProductController', function () use ($app, $container) {
+        return new \App\Http\Controllers\ProductController($container->get('view'));
+    });
+    // Set Views into StatController
+    $container->set('StatController', function () use ($app, $container) {
+        return new \App\Http\Controllers\StatController($container->get('view'));
+    });
+    // Set Views into GroupesController
+    $container->set('GroupesController', function () use ($app, $container) {
+        return new \App\Http\Controllers\GroupesController($container->get('view'));
+    });
+    
    
 };
