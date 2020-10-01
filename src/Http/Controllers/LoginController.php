@@ -12,7 +12,7 @@ class LoginController{
     
     public  static function welcome(RequestInterface $request, ResponseInterface $response){
         $response->getbody()->write('Login Controller Work !! yaaaaassss');
-        //return $this->get('view')->render($response, 'login.twig');
+        //return $this->get('view')->render($response, 'login.twig'); TEST
         return $response;
     }
 
