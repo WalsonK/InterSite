@@ -32,5 +32,29 @@
     </div>
 
     <!-- Tableaux -->
+    <div class="card cardTable">
+        <div class="card-body">
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Image</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for product in products %}
+                        <tr>
+                            <th scope="row"><input type="checkbox" class="form-check-input" id="{{ user.id}}"></th>
+                            <td>{{ product.img}}</td>
+                            <td>{{ product.nom}}</td>
+                            <td>{{ product.date}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 </main>

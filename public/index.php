@@ -46,6 +46,9 @@ AppFactory::setContainer($container);
 //Instantiate App
 $app = AppFactory::create();
 
+//Use Super Global
+$_SERVER['app'] = &$app;
+
 // Register middleware
 $middleware = require __DIR__ . '/../app/middleware.php';
 $middleware($app);

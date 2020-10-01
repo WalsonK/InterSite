@@ -13,6 +13,7 @@ return function (App $app){
     //Login Controller Routes
     //$app->get('/login', [LoginController::class, 'welcome']);
     $app->get('/login', 'LoginController:display');
+    $app->post('/login', 'LoginController:connect');
 
     // Login Route
     /*$app->get('/login', function(RequestInterface $request, ResponseInterface $response, $args){

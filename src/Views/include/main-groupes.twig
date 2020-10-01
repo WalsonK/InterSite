@@ -32,5 +32,28 @@
     </div>
 
     <!-- Tableaux -->
-
+    <div class="card cardTable">
+        <div class="card-body">
+            <table class="table table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">nb sous groupe</th>
+                        <th scope="col">Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for group in groups %}
+                        <tr>
+                            <th scope="row"><input type="checkbox" class="form-check-input" id="{{ group.id}}"></th>
+                            <td>{{ group.nom}}</td>
+                            <td>{{ group.child}}</td>
+                            <td>{{ group.date}}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 </main>

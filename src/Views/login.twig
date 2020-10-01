@@ -26,14 +26,14 @@
                 <!-- Login Card -->
                 <div class="card col-8 mx-auto" id="loginCard">
                     <div class="card-body">
-                        <form>
+                        <form method="POST">
                             <div class="form-group">
-                                <label for="emailInput">Adresse e-mail Professionnel {{ name }}</label>
-                                <input type="email" class="form-control" id="EmailInput">
+                                <label for="emailInput">Adresse e-mail Professionnel</label>
+                                <input type="email" class="form-control" id="emailInput" name="emailInput" Required>
                             </div>
                             <div class="form-group">
                                 <label for="passwordInput">Mot de passe</label>
-                                <input type="password" class="form-control" id="passwordInput">
+                                <input type="password" class="form-control" id="passwordInput" name="passwordInput" Required>
                             </div>
                             <div class="form-group form-check">
                                 <input type="checkbox" class="form-check-input" id="saveCheck">
