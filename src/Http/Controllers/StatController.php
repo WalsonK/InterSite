@@ -8,7 +8,8 @@ use Slim\Views\Twig as Views;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
-class LoginController{
+class StatController
+{
 
     protected $views;
 
@@ -16,19 +17,9 @@ class LoginController{
     {
         return $this->view = $views;
     }
-    
+
     public function display($request, $response)
     {
-        return $this->view->render($response, 'login.twig');
+        return $this->view->render($response, 'stats.twig');
     }
-
-
-
-    public static function welcome(Request $request, Response $response){
-        $response->getbody()->write('Login Controller Work !! yaaaaassss');
-        return $response;
-    }
-    
-
-    
 }

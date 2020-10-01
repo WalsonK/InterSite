@@ -12,7 +12,7 @@ $s = $_SERVER['REQUEST_URI'];
 $e = substr($s, -4);
 //die(dirname(__FILE__) . htmlentities($s));
 if ((substr($s, 0, 8) == '/assets/') &&
-    (($e == '.gif') || ($e == '.png') || ($e == '.jpg') || ($e == '.css'))
+    (($e == '.gif') || ($e == '.png') || ($e == '.jpg') || ($e == '.css') || ($e == '.js'))
 ) {
     if (!file_exists(dirname(__FILE__).htmlentities( $s))) {
         exit('No such file.');

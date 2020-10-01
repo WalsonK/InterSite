@@ -9,40 +9,37 @@ use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface as RequestInterface;
 
 return function (App $app){
-    // Routes pour Hello
-    $app->get('/hello/{name}', function (RequestInterface $request, ResponseInterface $response, $args) {
-        $name = $args['name'];
-        $response->getBody()->write("Hello, $name");
-        return $response;
-    });
-
-    // Define app routes
-    $app->get('/user/{name}', function (RequestInterface $request, ResponseInterface $response, $args) {
-        $name = $args['name'];
-        $response->getBody()->write("Hello, $name");
-        return $response;
-    });
 
     //Login Controller Routes
-    $app->get('/login', [LoginController::class, 'welcome']);
+    //$app->get('/login', [LoginController::class, 'welcome']);
+    $app->get('/login', 'LoginController:display');
 
     // Login Route
     /*$app->get('/login', function(RequestInterface $request, ResponseInterface $response, $args){
         return $this->get('view')->render($response, 'login.twig');
     });
     */
+
     // Product Route
+    $app->get('/produits', 'ProductController:display');
+    /*
     $app->get('/produits', function (RequestInterface $request, ResponseInterface $response, $args) {
         return $this->get('view')->render($response, 'products.twig');
     });
+    */
+    // Groupes Route
+    $app->get('/groupes', 'GroupesController:display');
 
     // Stats Route
+    $app->get('/stats', 'StatController:display');
+    /*
     $app->get('/stats', function (RequestInterface $request, ResponseInterface $response, $args) {
         return $this->get('view')->render($response, 'stats.twig');
     });
+    */
     
     $container = $app->getContainer();
-
+    
     $app->group('', function (RouteCollectorProxy $view)
     {
         $view->get('/example/{name}', function($request, $response, $args) {
