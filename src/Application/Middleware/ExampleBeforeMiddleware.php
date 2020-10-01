@@ -22,7 +22,7 @@ class ExampleBeforeMiddleware
         $existingContent = (string) $response->getBody();
 
         $response = new Response();
-        $response->getBody()->write('BEFORE ' . $existingContent);
+        $response->getBody()->write('' . $existingContent);
 
         return $response;
     }

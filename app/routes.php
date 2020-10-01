@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use Slim\App;
+use App\Http\Controllers\LoginController;
 use Slim\Routing\RouteCollectorProxy;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface as RequestInterface;
@@ -22,11 +23,14 @@ return function (App $app){
         return $response;
     });
 
+    //Login Controller Routes
+    $app->get('/login', [LoginController::class, 'welcome']);
+
     // Login Route
-    $app->get('/login', function(RequestInterface $request, ResponseInterface $response, $args){
+    /*$app->get('/login', function(RequestInterface $request, ResponseInterface $response, $args){
         return $this->get('view')->render($response, 'login.twig');
     });
-
+    */
     // Product Route
     $app->get('/produits', function (RequestInterface $request, ResponseInterface $response, $args) {
         return $this->get('view')->render($response, 'products.twig');

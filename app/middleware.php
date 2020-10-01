@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use App\Application\Middleware\ExampleAfterMiddleware;
 use App\Application\Middleware\ExampleBeforeMiddleware;
+use App\Application\Middleware\GetCssMiddleware;
 use Slim\App;
 
 return function (App $app) {
@@ -15,6 +16,7 @@ return function (App $app) {
         $settings['logErrors'], 
         $settings['logErrorDetails'],
     );
-    $app->add(ExampleBeforeMiddleware::class);
-    $app->add(ExampleAfterMiddleware::class);
+    //$app->add(ExampleBeforeMiddleware::class);
+    //$app->add(ExampleAfterMiddleware::class);
+    //$app->add(GetCssMiddleware::class);
 };
