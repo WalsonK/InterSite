@@ -24,7 +24,8 @@ return function (App $app){
     });
 
     //Login Controller Routes
-    $app->get('/login', [LoginController::class, 'welcome']);
+    //$app->get('/login', [LoginController::class, 'welcome']);
+    $app->get('/login', 'LoginController:display');
 
     // Login Route
     /*$app->get('/login', function(RequestInterface $request, ResponseInterface $response, $args){
@@ -42,7 +43,7 @@ return function (App $app){
     });
     
     $container = $app->getContainer();
-
+    
     $app->group('', function (RouteCollectorProxy $view)
     {
         $view->get('/example/{name}', function($request, $response, $args) {

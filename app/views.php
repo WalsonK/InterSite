@@ -7,6 +7,7 @@ use Slim\Views\Twig;
 use Slim\Views\TwigMiddleware;
 use Twig\Loader\FilesystemLoader;
 
+
 return function (App $app) {
     $container = $app->getContainer();
 
@@ -20,4 +21,10 @@ return function (App $app) {
     $container->set('viewMiddleware', function () use ($app, $container) {
         return new TwigMiddleware($container->get('view'), $app->getRouteCollector()->getRouteParser());
     });
+
+    // Set Views into LoginController
+    $container->set('LoginController', function () use ($app, $container) {
+        return new \App\Http\Controllers\LoginController($container->get('view'));
+    });
+   
 };
