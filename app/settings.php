@@ -21,11 +21,17 @@ return function(Container $container){
                 'path' => __DIR__ . '/../src/views',
                 'settings' => ['cache' => false],
             ],
-            'connection' => [
-                'host' => 'https://intermarchegestion.000webhostapp.com/',
-                'dbname' => 'id14985141',
+            'connection1' => [
+                'host' => 'https://databases.000webhost.com/',
+                'dbname' => 'id14985141_intermarchegestionbdd',
                 'dbuser' => 'id14985141_root',
                 'dbpass' => 'PJ<R{ka5^4|zhvH4',
+            ],
+            'connection' => [
+                'host' => 'localhost',
+                'dbname' => 'id14985141_intermarchegestionbdd',
+                'dbuser' => 'root',
+                'dbpass' => '',
             ]
         ];
     });

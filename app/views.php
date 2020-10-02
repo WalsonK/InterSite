@@ -24,7 +24,7 @@ return function (App $app) {
 
     // Set Views into LoginController
     $container->set('LoginController', function () use ($app, $container) {
-        return new \App\Http\Controllers\LoginController($container->get('view'));
+        return new \App\Http\Controllers\LoginController($container->get('view'), $container);
     });
     // Set Views into ProductController
     $container->set('ProductController', function () use ($app, $container) {

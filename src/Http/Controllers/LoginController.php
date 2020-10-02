@@ -13,9 +13,16 @@ use Slim\Factory\AppFactory;
 class LoginController{
 
     protected $views;
+    private $container;
+    protected $db;
 
-    public function __construct(Views $views)
+    public function __construct(Views $views, $container)
     {
+        // Get dataBase
+        $this->container = $container;
+        $this->db = $this->container->get('connection');
+
+
         return $this->view = $views;
     }
     
@@ -53,21 +60,22 @@ class LoginController{
             // Recup datas from $_POST and crypt mdp
             $emailInput = $_POST['emailInput'];
             $mdpInput = $key1 . sha1($_POST['passwordInput']) . $key2;
-            /*
+            
             // Prepare req of bdd
             $prep_user = "SELECT * FROM ADMINISTRATEUR WHERE mail = ? AND password = ?";
-            $requser = $bdd->prepare($prep_user);
+            $requser = $this->db->prepare($prep_user);
             $requser->execute(array($emailInput, $mdpInput));
             
             //vérifie si l'user existe 
-            $user_exist = $requser->rowCount();
-            if ($user_exist == 1){
+            $userExist = $requser->rowCount();
+            if ($userExist == 1){
                 $message = 'Bienvenue ad@t.fr ! mdp: test | ';
             }
             else{
                 $message = 'Mot de Passe ou email Incorrect !';
             }
-            */
+            
+
             // Le login est-il rempli ?
             if (empty($_POST['emailInput'])) {
                 $message = 'Veuillez indiquer votre login svp !';

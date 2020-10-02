@@ -2,6 +2,12 @@ body {
     background-color: #DEE1E6;
 }
 
+.bigLogo{
+    margin-top: 5%;
+    margin-left: 32%;
+    width: 35%;
+}
+
 #loginCard{
     border-radius: 15px;
     position: fixed !important;
@@ -55,7 +61,7 @@ body {
 .optionsBlock{
     position: absolute;
     right: 5%;
-    top: 12%;
+    top: 14%;
     border-radius: 15px;
     width:70%;
 }
